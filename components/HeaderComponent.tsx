@@ -1,3 +1,5 @@
+"use client";
+import React, { useState } from "react";
 import { Input } from "@/components/ui/input";
 import { Search, Phone, ChevronDown } from "lucide-react";
 import { cn } from "@/lib/utils";
@@ -5,6 +7,9 @@ import { cn } from "@/lib/utils";
 import { orbitron, poppins } from "@/lib/fonts";
 
 export function Header() {
+  const [selectedCity, setSelectedCity] = useState("Bangalore");
+  const [open, setOpen] = useState(false);
+
   return (
     <header className="border-b border-gray-200 px-4 py-3">
       <div className="max-w-7xl mx-auto flex items-center justify-between">
@@ -17,7 +22,7 @@ export function Header() {
           >
             Vutto
           </div>
-          <div className="relative flex-1 max-w-md">
+          <div className="relative flex-1 max-w-md hidden md:block">
             <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-4 h-4" />
             <Input
               placeholder="Search by brand or model"
@@ -39,9 +44,31 @@ export function Header() {
             <a href="#" className="text-gray-600 hover:text-gray-900">
               Profile
             </a>
-            <div className="flex items-center gap-1 text-gray-600 rounded-4xl border-2 py-1 px-4">
-              <span>Bangalore</span>
-              <ChevronDown className="w-4 h-4" />
+            <div className="relative">
+              <button
+                type="button"
+                className="flex items-center gap-1 text-gray-600 rounded-4xl border-2 py-1 px-4 focus:outline-none"
+                onClick={() => setOpen((open) => !open)}
+              >
+                <span>{selectedCity}</span>
+                <ChevronDown className="w-4 h-4" />
+              </button>
+              {open && (
+                <ul className="absolute left-0 mt-2 w-full bg-white border rounded shadow z-10">
+                  {["Bangalore", "Mumbai", "Delhi"].map((city) => (
+                    <li
+                      key={city}
+                      className="px-4 py-2 hover:bg-gray-100 cursor-pointer"
+                      onClick={() => {
+                        setSelectedCity(city);
+                        setOpen(false);
+                      }}
+                    >
+                      {city}
+                    </li>
+                  ))}
+                </ul>
+              )}
             </div>
             <div className="flex items-center gap-2 text-gray-900">
               <Phone className="w-4 h-4" />

@@ -89,11 +89,11 @@ export function HeroSection() {
                 type="tel"
                 name="phone"
                 placeholder="Enter your phone number"
-                className="border border-gray-300 rounded-full px-6 py-2 w-full lg:w-1/2 mb-6 block bg-white placeholder:text-gray-500"
+                className="border border-gray-300 rounded-full px-6 py-2 w-full lg:w-1/2 mb-6 block bg-white placeholder:text-gray-500 placeholder:text-center"
               />
 
               <Button className="bg-gray-900 hover:bg-gray-800 text-white px-8 py-3 rounded-full w-full lg:w-1/2 cursor-pointer">
-                GET INSTANT QUOTE NOW
+                Get the best quote for you
               </Button>
             </form>
           </div>

@@ -6,6 +6,7 @@ import { StoriesSection } from "@/components/StoriesSection";
 import { FAQSection } from "@/components/FaqSection";
 import { HelpSection } from "@/components/HelpSection";
 import { Footer } from "@/components/FooterComponent";
+import BottomNavigation from "@/components/BottomNavigation";
 
 export default function ZuttoMarketplace() {
   return (
@@ -18,6 +19,7 @@ export default function ZuttoMarketplace() {
       <FAQSection />
       <HelpSection />
       <Footer />
+      <BottomNavigation />
     </div>
   );
 }
