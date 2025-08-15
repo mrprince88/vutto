@@ -3,7 +3,6 @@
 import type React from "react";
 
 import { useState } from "react";
-import { Home, ShoppingCart, Heart, Eye, User } from "lucide-react";
 import { cn } from "@/lib/utils";
 
 interface NavItem {
