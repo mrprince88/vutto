@@ -25,28 +25,30 @@ export function Header() {
             />
           </div>
         </div>
-        <nav className={cn("flex items-center gap-6", poppins.className)}>
-          <a href="#" className="text-red-500 font-bold">
-            Buy
-          </a>
-          <a href="#" className="text-gray-600 hover:text-gray-900">
-            Sell
-          </a>
-          <a href="#" className="text-gray-600 hover:text-gray-900">
-            Shortlists
-          </a>
-          <a href="#" className="text-gray-600 hover:text-gray-900">
-            Profile
-          </a>
-          <div className="flex items-center gap-1 text-gray-600 rounded-4xl border-2 py-1 px-4">
-            <span>Bangalore</span>
-            <ChevronDown className="w-4 h-4" />
-          </div>
-          <div className="flex items-center gap-2 text-gray-900">
-            <Phone className="w-4 h-4" />
-            <span className="font-medium">+91 9742433546</span>
-          </div>
-        </nav>
+        <div className="hidden md:block">
+          <nav className={cn("flex items-center gap-6", poppins.className)}>
+            <a href="#" className="text-red-500 font-bold">
+              Buy
+            </a>
+            <a href="#" className="text-gray-600 hover:text-gray-900">
+              Sell
+            </a>
+            <a href="#" className="text-gray-600 hover:text-gray-900">
+              Shortlists
+            </a>
+            <a href="#" className="text-gray-600 hover:text-gray-900">
+              Profile
+            </a>
+            <div className="flex items-center gap-1 text-gray-600 rounded-4xl border-2 py-1 px-4">
+              <span>Bangalore</span>
+              <ChevronDown className="w-4 h-4" />
+            </div>
+            <div className="flex items-center gap-2 text-gray-900">
+              <Phone className="w-4 h-4" />
+              <span className="font-medium">+91 9742433546</span>
+            </div>
+          </nav>
+        </div>
       </div>
     </header>
   );

@@ -13,7 +13,7 @@ export function FAQSection() {
           FAQs
         </h2>
 
-        <Accordion type="single" collapsible className="space-y-4">
+        <Accordion type="single" collapsible className="space-y-2">
           <AccordionItem
             value="item-1"
             className="border border-gray-200 rounded-lg px-6"
@@ -92,6 +92,7 @@ export function FAQSection() {
               competitive loan rates and flexible payment options.
             </AccordionContent>
           </AccordionItem>
+          <div />
         </Accordion>
       </div>
     </section>
