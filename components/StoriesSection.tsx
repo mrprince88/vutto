@@ -43,7 +43,7 @@ export function StoriesSection() {
                   </div>
                   <div className="flex-1 text-center md:text-left p-4">
                     <blockquote className="text-md mb-6 leading-relaxed text-[#222222]">
-                      "{testimonial.quote}"
+                      &quot;{testimonial.quote}&quot;
                     </blockquote>
                     <div>
                       <div className="font-semibold text-foreground text-lg">

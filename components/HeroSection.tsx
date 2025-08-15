@@ -1,7 +1,6 @@
 "use client";
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
-import { Shield, Clock, RefreshCw } from "lucide-react";
 import { SuccessModal } from "./SuccessModal";
 
 export function HeroSection() {

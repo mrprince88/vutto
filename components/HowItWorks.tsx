@@ -1,5 +1,3 @@
-import { MessageSquare, Shield, Award } from "lucide-react";
-
 export function HowItWorks() {
   return (
     <section className="px-4 py-16">
